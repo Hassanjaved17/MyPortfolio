@@ -43,7 +43,7 @@ const FooterMain = () => {
           })}
         </ul>
       </div>
-      <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-lightBrown">
+      <p className="max-w-[1200px] mx-auto md:text-right sm:text-center mt-2 mb-12 text-sm text-lightBrown">
         © 2025 Hassan Javed  | All Rights Reserved.
       </p>
     </div>
