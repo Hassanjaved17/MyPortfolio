@@ -5,32 +5,18 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
   {
-    name: "Vacation of Africa",
-    year: "Mar2022",
+    name: "Saloon Website",
+    year: "June2025",
     align: "right",
-    image: "../../public/images/website-img-1.jpg",
-    link: "#",
+    image: "/images/website-img-1.jpg",
+    link: "https://salon-website-mu.vercel.app",
   },
   {
-    name: "Moola App",
-    year: "Sept2022",
+    name: "Jewellery Store",
+    year: "May2025",
     align: "left",
-    image: "../../public/images/website-img-2.webp",
-    link: "#",
-  },
-  {
-    name: "Tourzania",
-    year: "Jan2023",
-    align: "right",
-    image: "../../public/images/website-img-3.jpg",
-    link: "#",
-  },
-  {
-    name: "Bank of Luck",
-    year: "May2024",
-    align: "left",
-    image: "../../public/images/website-img-4.jpg",
-    link: "#",
+    image: "images/website-img-2.webp",
+    link: "https://premium-jewellers-hki1.vercel.app/",
   },
 ];
 
@@ -46,17 +32,16 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
-        {projects.map((project, index) => {
-          return (
-            <SingleProject
-              key={index}
-              name={project.name}
-              year={project.year}
-              align={project.align}
-              image={project.image}
-            />
-          );
-        })}
+        {projects.map((project, index) => (
+          <SingleProject
+            key={index}
+            name={project.name}
+            year={project.year}
+            align={project.align}
+            image={project.image}
+            link={project.link}
+          />
+        ))}
       </div>
     </div>
   );

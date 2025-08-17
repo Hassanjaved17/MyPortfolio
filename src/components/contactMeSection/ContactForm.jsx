@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
   const handleName = (e) => {
@@ -26,8 +27,10 @@ const ContactForm = () => {
         () => {
           setEmail("");
           setName("");
+          setSubject(""); 
           setMessage("");
           setSuccess("Message Sent Succesfully");
+          setTimeout(() => setSuccess(""), 5000);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -57,6 +60,16 @@ const ContactForm = () => {
           value={email}
           onChange={handleEmail}
         />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          className="h-12 rounded-lg bg-lightBrown px-2"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        />
+
         <textarea
           type="text"
           name="message"
