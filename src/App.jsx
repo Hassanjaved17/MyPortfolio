@@ -9,6 +9,7 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <ProjectsMain />
       <ContactMeMain />
       <FooterMain />
+
+      <ScrollToTopBtn />
     </main>
   );
 }
