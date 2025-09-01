@@ -27,7 +27,7 @@ const ContactForm = () => {
         () => {
           setEmail("");
           setName("");
-          setSubject(""); 
+          setSubject("");
           setMessage("");
           setSuccess("Message Sent Succesfully");
           setTimeout(() => setSuccess(""), 5000);
@@ -47,7 +47,9 @@ const ContactForm = () => {
           name="from_name"
           placeholder="Your Name"
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-lg bg-lightBrown px-2 border border-[#FB9718] 
+             focus:outline-none focus:border-[#15D1E9] focus:ring-1 focus:ring-[#15D1E9] 
+             transition duration-300 ease-in-out"
           value={name}
           onChange={handleName}
         />
@@ -56,34 +58,43 @@ const ContactForm = () => {
           name="from_email"
           placeholder="Your Email"
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-lg bg-lightBrown px-2 border border-[#FB9718] 
+             focus:outline-none focus:border-[#15D1E9] focus:ring-1 focus:ring-[#15D1E9] 
+             transition duration-300 ease-in-out"
           value={email}
           onChange={handleEmail}
         />
+
         <input
           type="text"
           name="subject"
           placeholder="Subject"
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-lg bg-lightBrown px-2 border border-[#FB9718] 
+             focus:outline-none focus:border-[#15D1E9] focus:ring-1 focus:ring-[#15D1E9] 
+             transition duration-300 ease-in-out"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
         />
 
         <textarea
-          type="text"
           name="message"
           rows="9"
           cols="50"
           placeholder="Message"
           required
-          className=" rounded-lg bg-lightBrown p-2"
+          className="rounded-lg bg-lightBrown p-2 border border-[#FB9718] 
+             focus:outline-none focus:border-[#15D1E9] focus:ring-1 focus:ring-[#15D1E9] 
+             transition duration-300 ease-in-out"
           value={message}
           onChange={handleMessage}
         />
+
         <button
           type="submit"
-          className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500"
+          className="w-full h-12 rounded-lg border border-cyan bg-cyan text-white font-bold text-xl
+             hover:bg-darkCyan focus:outline-none focus:ring-2 focus:ring-cyan/70 
+             transition-all duration-500"
         >
           Send
         </button>
