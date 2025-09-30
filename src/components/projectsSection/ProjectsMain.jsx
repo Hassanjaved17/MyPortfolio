@@ -9,7 +9,7 @@ const projects = [
     year: "June2025",
     align: "right",
     image: "/images/website-img-1.jpg",
-    link: "https://salon-website-mu.vercel.app",
+    link: "https://dictatewebinane.netlify.app/",
   },
   {
     name: "Jewellery Store",
