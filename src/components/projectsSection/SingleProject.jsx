@@ -23,7 +23,7 @@ const SingleProject = ({ name, year, align, image, link }) => {
           {year}
         </h2>
 
-        {/* 🔥 added target + rel */}
+        {/*  added target + rel */}
         <a
           href={link}
           target="_blank"

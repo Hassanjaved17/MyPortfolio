@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import Skeleton from "react-loading-skeleton";
 import { FaRegCircle } from "react-icons/fa6";
+import { PiHexagonThin } from "react-icons/pi";
 
 const HeroPic = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,16 +34,22 @@ const HeroPic = () => {
 
       {/* Profile Image */}
       <img
-        src="/images/heroimg8.png"
-        className={`w-full h-full object-cover rounded-full transition-transform duration-500 
+        src="/images/me.png" // your new pic
+        className={`w-full h-full object-cover object-[50%_40%] rounded-full transition-transform duration-500 
                    ${isLoading ? "hidden" : "block"} hover:scale-105`}
         onLoad={() => setIsLoading(false)}
         alt="Hassan Javed"
       />
 
-      {/* Subtle spinning background */}
+      {/* Spinning Circle Background */}
       <div className="absolute inset-0 -z-10 flex justify-center items-center">
         <FaRegCircle className="h-[115%] w-[115%] text-[#15D1E9]/40 dark:text-purple-400/30 blur-sm animate-[spin_40s_linear_infinite]" />
+      </div>
+
+      {/* Spinning Hexagon Backgrounds */}
+      <div className="absolute inset-0 -z-20 flex justify-center items-center">
+        <PiHexagonThin className="md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-orange opacity-70 blur-sm animate-[spin_40s_linear_infinite]" />
+        <PiHexagonThin className="md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-cyan opacity-50 animate-[spin_60s_linear_infinite]" />
       </div>
     </motion.div>
   );
