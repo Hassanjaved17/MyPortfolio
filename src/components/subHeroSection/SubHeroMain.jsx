@@ -6,7 +6,7 @@ import "swiper/css/free-mode";
 const SubHeroMain = () => {
   const skills = ["Fast Learner", "Team Work", "Details Master", "Problem Solving", "Critical Thinking", "Creativity", "Time Management"];
 
-  // Duplicate the skills so the loop looks continuous
+
   const slides = [...skills, ...skills, ...skills, ...skills];
 
   return (

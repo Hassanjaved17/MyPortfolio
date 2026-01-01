@@ -34,7 +34,7 @@ const HeroPic = () => {
 
       {/* Profile Image */}
       <img
-        src="/images/me.png" // your new pic
+        src="/images/me.jpg" // your new pic
         className={`w-full h-full object-cover object-[50%_40%] rounded-full transition-transform duration-500 
                    ${isLoading ? "hidden" : "block"} hover:scale-105`}
         onLoad={() => setIsLoading(false)}
