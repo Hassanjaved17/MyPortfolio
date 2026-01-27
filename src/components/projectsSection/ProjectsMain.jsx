@@ -11,7 +11,7 @@ const allProjects = [
     year: "June 2025",
     align: "right",
     category: "react",
-    image: "/images/saloon-web-img.wep",
+    image: "/images/saloon-web-img.webp",
     link: "https://dictatewebinane.netlify.app/",
   },
   {
@@ -19,31 +19,32 @@ const allProjects = [
     year: "May 2025",
     align: "left",
     category: "react",
-    image: "/images/jewellery-web-img.png",
+    image: "/images/jewellery-web-img.webp",
     link: "https://premium-jewellers-hki1.vercel.app/",
-  },
-  {
-    name: "Modern Portfolio Website",
-    year: "Aug 2025",
-    align: "right",
-    category: "fullstack",
-    image: "/images/demo-portfolio-minimal.png",
-    link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
   },
   {
     name: "Nexcent Landing Page",
     year: "Oct 2025",
-    align: "left",
+    align: "right",
     category: "html",
-    image: "/images/nexcent-web-img.png",
+    image: "/images/nexcent-web-img.webp",
     link: "https://hassanjaved17.github.io/nexcent-landing-page/",
   },
+  {
+    name: "Modern Portfolio Website",
+    year: "Aug 2025",
+    align: "left",
+    category: "fullstack",
+    image: "/images/demo-portfolio-minimal.webp",
+    link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
+  },
+
   {
     name: "FitZone E-com Store",
     year: "Sep 2025",
     align: "right",
     category: "fullstack",
-    image: "/images/fitzone-web-img.png",
+    image: "/images/fitzone-web-img.webp",
     link: "https://hassanjaved17.github.io/FitZone-E-com-store/",
   },
   {
@@ -51,7 +52,7 @@ const allProjects = [
     year: "Nov 2025",
     align: "left",
     category: "html",
-    image: "/images/rentcars-web-img.png",
+    image: "/images/rentcars-web-img.webp",
     link: "https://hassanjaved17.github.io/Rent-Car-Landing-Page/",
   },
   {
@@ -59,7 +60,7 @@ const allProjects = [
     year: "May 2025",
     align: "right",
     category: "html",
-    image: "/images/digital-clock-web.png",
+    image: "/images/digital-clock-web.webp",
     link: "https://hassanjaved17.github.io/Digital-Clock/",
   },
   {
@@ -67,7 +68,7 @@ const allProjects = [
     year: "June 2025",
     align: "left",
     category: "html",
-    image: "/images/neon-calculator-img.png",
+    image: "/images/neon-calculator-img.webp",
     link: "https://hassanjaved17.github.io/Neon-Calculator/",
   },
 ];
@@ -122,8 +123,8 @@ const ProjectsMain = () => {
               setVisibleCount(2); // reset on filter change
             }}
             className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
-                ? "bg-cyan text-black"
-                : "border-cyan text-cyan hover:bg-cyan hover:text-black"
+              ? "bg-cyan text-black"
+              : "border-cyan text-cyan hover:bg-cyan hover:text-black"
               }`}
           >
             {btn.label}
@@ -161,7 +162,7 @@ const ProjectsMain = () => {
               exit={{ opacity: 0 }}
               className="text-center text-orange-500 text-lg mt-8"
             >
-              No projects found for this filter 
+              No projects found for this filter
             </motion.p>
           )}
         </AnimatePresence>
