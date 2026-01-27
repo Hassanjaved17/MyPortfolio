@@ -11,7 +11,7 @@ const allProjects = [
     year: "June 2025",
     align: "right",
     category: "react",
-    image: "/images/saloon-web-img.png",
+    image: "/images/saloon-web-img.wep",
     link: "https://dictatewebinane.netlify.app/",
   },
   {
@@ -161,7 +161,7 @@ const ProjectsMain = () => {
               exit={{ opacity: 0 }}
               className="text-center text-orange-500 text-lg mt-8"
             >
-              No projects found for this filter 😔
+              No projects found for this filter 
             </motion.p>
           )}
         </AnimatePresence>
