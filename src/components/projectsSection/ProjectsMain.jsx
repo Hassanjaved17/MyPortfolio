@@ -136,7 +136,7 @@ const ProjectsMain = () => {
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
         <AnimatePresence>
           {visibleProjects.length > 0 ? (
-            visibleProjects.map((project, index) => (
+            visibleProjects.map((project) => (
               <motion.div
                 key={project.name}
                 variants={projectVariants}
