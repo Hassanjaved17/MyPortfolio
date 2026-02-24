@@ -4,7 +4,6 @@ import SingleProject from "./SingleProject";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
-// ALL PROJECTS DATA
 const allProjects = [
   {
     name: "Saloon Website",
@@ -38,7 +37,6 @@ const allProjects = [
     image: "/images/demo-portfolio-minimal.webp",
     link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
   },
-
   {
     name: "FitZone E-com Store",
     year: "Sep 2025",
@@ -73,7 +71,6 @@ const allProjects = [
   },
 ];
 
-// FILTER BUTTONS
 const filterOptions = [
   { label: "All", value: "all" },
   { label: "HTML / CSS / JS", value: "html" },
@@ -81,7 +78,6 @@ const filterOptions = [
   { label: "Full Stack", value: "fullstack" },
 ];
 
-// Animation variants for each project
 const projectVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
@@ -92,18 +88,18 @@ const ProjectsMain = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleCount, setVisibleCount] = useState(2);
 
-  // FILTER LOGIC
   const filteredProjects =
     activeFilter === "all"
       ? allProjects
-      : allProjects.filter((project) => project.category === activeFilter);
+      : allProjects.filter((p) => p.category === activeFilter);
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
   const allShown = visibleCount >= filteredProjects.length;
 
   return (
     <div id="projects" className="max-w-[1200px] mx-auto px-4">
-      {/* SECTION HEADING */}
+
+      {/* HEADING */}
       <motion.div
         variants={fadeIn("top", 0)}
         initial="hidden"
@@ -113,18 +109,18 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
 
-      {/* FILTER BUTTONS */}
+   
       <div className="flex gap-4 justify-center flex-wrap mt-10">
         {filterOptions.map((btn) => (
           <button
             key={btn.value}
             onClick={() => {
               setActiveFilter(btn.value);
-              setVisibleCount(2); // reset on filter change
+              setVisibleCount(2);
             }}
             className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
-              ? "bg-cyan text-black"
-              : "border-cyan text-cyan hover:bg-cyan hover:text-black"
+                ? "bg-[#f59e0b] text-black border-[#f59e0b]"
+                : "border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black"
               }`}
           >
             {btn.label}
@@ -160,21 +156,20 @@ const ProjectsMain = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-center text-orange-500 text-lg mt-8"
+              className="text-center text-[#f59e0b] text-lg mt-8"
             >
-              No projects found for this filter
+              No projects found for this filter.
             </motion.p>
           )}
         </AnimatePresence>
       </div>
 
-      {/* SEE MORE / SHOW LESS */}
       {filteredProjects.length > 2 && (
         <div className="flex justify-center mt-12">
           {!allShown ? (
             <button
               onClick={() => setVisibleCount((prev) => prev + 2)}
-              className="px-6 py-3 rounded-lg text-lg border border-cyan text-cyan hover:bg-cyan hover:text-black transition-all duration-300"
+              className="px-6 py-3 rounded-lg text-lg border border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black transition-all duration-300"
             >
               See More
             </button>
@@ -193,3 +188,5 @@ const ProjectsMain = () => {
 };
 
 export default ProjectsMain;
+
+

@@ -13,7 +13,7 @@ const SingleProject = ({ name, year, align, image, link }) => {
         } justify-end sm:flex-col`}
     >
       <div>
-        <h2 className="md:text-3xl sm:text-2xl text-orange ">{name}</h2>
+        <h2 className="md:text-3xl sm:text-2xl text-orange">{name}</h2>
         <h2
           className={`text-xl font-thin text-white font-special sm:text-center ${align === "left" ? "md:text-right" : "md:text-left"
             }`}
@@ -21,21 +21,22 @@ const SingleProject = ({ name, year, align, image, link }) => {
           {year}
         </h2>
 
-        {/*  added target + rel */}
+    
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer sm:justify-self-center ${align === "left" ? "md:justify-self-end" : "md:justify-self-start"
+          className={`text-lg flex gap-2 items-center text-[#f59e0b] hover:text-white transition-all duration-500 cursor-pointer sm:justify-self-center ${align === "left" ? "md:justify-self-end" : "md:justify-self-start"
             }`}
         >
           View <BsFillArrowUpRightCircleFill />
         </a>
       </div>
 
-      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 ralative border border-white">
-        <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
-        <img src={image} alt="website image" className="w-full h-full" />
+      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white/20">
+        {/* Dark overlay on idle, fades out on hover to reveal screenshot */}
+        <div className="w-full h-full bg-black/50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden z-10 rounded-xl"></div>
+        <img src={image} alt={`${name} preview`} className="w-full h-full object-cover" />
       </div>
     </motion.div>
   );
