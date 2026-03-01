@@ -12,7 +12,7 @@
 
 <br/>
 
-![Portfolio Preview]([https://i.imgur.com/placeholder.png](https://github.com/user-attachments/assets/d1608292-e425-4dee-885b-c47ba7bdaab2))
+![Portfolio Preview](https://github.com/user-attachments/assets/d1608292-e425-4dee-885b-c47ba7bdaab2)
 
 
 </div>
