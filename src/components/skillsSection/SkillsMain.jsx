@@ -38,7 +38,7 @@ const containerVariants = {
   },
 };
 
-// Each card's animation — clean, consistent, no string delay hacks
+
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
@@ -59,21 +59,19 @@ const SkillsMain = () => {
           <SkillsText />
         </motion.div>
 
-        {/*  Container handles stagger — no per-card delay needed anymore */}
+        {/* Cards */}
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 mt-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          //  amount: 0.1 — triggers when just 10% of the grid is visible
-          //    prevents cards from being skipped on fast scrollers
           viewport={{ once: false, amount: 0.1 }}
         >
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
               variants={cardVariants}
-            //  No initial/whileInView here — parent container controls it
+         
             >
               <SingleSkill
                 name={skill.name}

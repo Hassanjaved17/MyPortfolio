@@ -2,61 +2,64 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { TypeAnimation } from "react-type-animation";
 
+
 const HeroText = () => {
   return (
     <div className="flex flex-col gap-4 h-full justify-center text-center md:text-left">
-      {/* Main Heading */}
+
+      {/* Main Heading — first to appear */}
       <motion.h1
-        variants={fadeIn("right", 0.4)}
+        variants={fadeIn("right", 0.2)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true, amount: 0 }}
         className="text-3xl sm:text-4xl md:text-[2.8rem] lg:text-6xl text-orange font-bold uppercase leading-tight"
       >
         Hassan Javed
         <br className="hidden md:block" />
       </motion.h1>
 
-      {/* Animated subtitle */}
+      {/* Typing animation — second, after heading settles */}
       <motion.div
-        variants={fadeIn("down", 0.2)}
+        variants={fadeIn("down", 0.4)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true, amount: 0 }}
         className="text-lg sm:text-xl lg:text-2xl uppercase text-lightGrey"
       >
         <TypeAnimation
           sequence={[
+            500, //  500ms initial delay — lets entrance animations finish first
             "I am Frontend Web Developer",
             1000,
-            "I am a Mern Stack Developer",
+            "I am a MERN Stack Developer",
             1000,
             "I am a Full Stack Developer",
             1000,
-            "I am Responsive Designer",
+            "I am a Responsive Designer",
             1000,
             "I am a Creative Designer",
             1000,
           ]}
           wrapper="span"
-          speed={30}
+          speed={35}
           repeat={Infinity}
-          preRenderFirstString={true}
+          preRenderFirstString={false} // Pre-render first string false — don't render before animation ready
         />
       </motion.div>
 
-      {/* Description */}
+      {/* Description — last to appear */}
       <motion.p
         variants={fadeIn("up", 0.6)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true, amount: 0 }}
         className="text-base sm:text-lg mt-4 leading-relaxed"
       >
         A Passionate Web Developer <br className="hidden sm:block" />
         with 2 years of experience.
       </motion.p>
+
     </div>
   );
 };
