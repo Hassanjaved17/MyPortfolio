@@ -4,8 +4,15 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 const SubHeroMain = () => {
-  const skills = ["Fast Learner", "Team Work", "Details Master", "Problem Solving", "Critical Thinking", "Creativity", "Time Management"];
-
+  const skills = [
+    "Fast Learner",
+    "Team Work",
+    "Details Master",
+    "Problem Solving",
+    "Critical Thinking",
+    "Creativity",
+    "Time Management",
+  ];
 
   const slides = [...skills, ...skills, ...skills, ...skills];
 
@@ -14,10 +21,9 @@ const SubHeroMain = () => {
       <Swiper
         modules={[Autoplay, FreeMode]}
         freeMode={true}
-        freeModeMomentum={false}
         loop={true}
         slidesPerView="auto"
-        spaceBetween={0} // Keep this at 0
+        spaceBetween={0}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
@@ -33,7 +39,8 @@ const SubHeroMain = () => {
             style={{ padding: 0, margin: 0 }}
           >
             <span className="mx-10">{skill}</span>
-          </SwiperSlide>))}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
