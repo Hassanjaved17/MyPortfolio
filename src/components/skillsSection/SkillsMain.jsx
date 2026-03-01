@@ -5,9 +5,9 @@ import { fadeIn } from "../../framerMotion/variants";
 
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress, SiMongodb, SiFirebase, SiPostman, SiRedux } from "react-icons/si";
+import { SiExpress, SiMongodb, SiFirebase, SiPostman, SiRedux, SiAxios } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { TbApi } from "react-icons/tb";
+
 
 const skills = [
   { name: "HTML5", icon: FaHtml5, category: "Frontend", color: "#e34f26" },
@@ -24,7 +24,7 @@ const skills = [
   { name: "Git", icon: FaGitAlt, category: "Tools", color: "#f05032" },
   { name: "GitHub", icon: FaGithub, category: "Tools", color: "#ffffff" },
   { name: "Postman", icon: SiPostman, category: "Tools", color: "#ff6c37" },
-  { name: "Axios", icon: TbApi, category: "Tools", color: "#5a29e4" },
+  { name: "Axios", icon: SiAxios, category: "Tools", color: "#5a29e4" },
 ];
 
 //  Stagger container — animates children in sequence automatically
