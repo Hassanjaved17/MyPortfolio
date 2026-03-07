@@ -6,6 +6,22 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const allProjects = [
   {
+    name: "Quote Vault",
+    year: "Mar 2026",
+    align: "right",
+    category: "fullstack",
+    image: "/images/quote-vault-img.webp",
+    link: "https://hassanjaved17.github.io/Firebase-Quote-App/",
+  },
+  {
+    name: "Firebase Auth App",
+    year: "Mar 2026",
+    align: "left",
+    category: "fullstack",
+    image: "/images/firebase-auth-img.webp",
+    link: "https://hassanjaved17.github.io/Firebase-auth-app/",
+  },
+  {
     name: "Saloon Website",
     year: "June 2025",
     align: "right",
@@ -33,7 +49,7 @@ const allProjects = [
     name: "Modern Portfolio Website",
     year: "Aug 2025",
     align: "left",
-    category: "fullstack",
+    category: "html",
     image: "/images/demo-portfolio-minimal.webp",
     link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
   },
@@ -41,7 +57,7 @@ const allProjects = [
     name: "FitZone E-com Store",
     year: "Sep 2025",
     align: "right",
-    category: "fullstack",
+    category: "html",
     image: "/images/fitzone-web-img.webp",
     link: "https://hassanjaved17.github.io/FitZone-E-com-store/",
   },
@@ -109,7 +125,7 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
 
-   
+
       <div className="flex gap-4 justify-center flex-wrap mt-10">
         {filterOptions.map((btn) => (
           <button
@@ -119,8 +135,8 @@ const ProjectsMain = () => {
               setVisibleCount(2);
             }}
             className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
-                ? "bg-[#f59e0b] text-black border-[#f59e0b]"
-                : "border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black"
+              ? "bg-[#f59e0b] text-black border-[#f59e0b]"
+              : "border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black"
               }`}
           >
             {btn.label}
