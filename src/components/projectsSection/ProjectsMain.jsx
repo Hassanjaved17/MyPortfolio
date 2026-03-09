@@ -6,9 +6,15 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const allProjects = [
   {
+    name: "SpendSmart",
+    year: "Mar 2026",
+    category: "fullstack",
+    image: "/images/spendsmart-img.webp",
+    link: "https://spend-smart-sandy.vercel.app/",
+  },
+  {
     name: "Quote Vault",
     year: "Mar 2026",
-    align: "right",
     category: "fullstack",
     image: "/images/quote-vault-img.webp",
     link: "https://hassanjaved17.github.io/Firebase-Quote-App/",
@@ -16,7 +22,6 @@ const allProjects = [
   {
     name: "Firebase Auth App",
     year: "Mar 2026",
-    align: "left",
     category: "fullstack",
     image: "/images/firebase-auth-img.webp",
     link: "https://hassanjaved17.github.io/Firebase-auth-app/",
@@ -24,7 +29,6 @@ const allProjects = [
   {
     name: "Saloon Website",
     year: "June 2025",
-    align: "right",
     category: "react",
     image: "/images/saloon-web-img.webp",
     link: "https://dictatewebinane.netlify.app/",
@@ -32,7 +36,6 @@ const allProjects = [
   {
     name: "Jewellery Store",
     year: "May 2025",
-    align: "left",
     category: "react",
     image: "/images/jewellery-web-img.webp",
     link: "https://premium-jewellers-hki1.vercel.app/",
@@ -40,7 +43,6 @@ const allProjects = [
   {
     name: "Nexcent Landing Page",
     year: "Oct 2025",
-    align: "right",
     category: "html",
     image: "/images/nexcent-web-img.webp",
     link: "https://hassanjaved17.github.io/nexcent-landing-page/",
@@ -48,7 +50,6 @@ const allProjects = [
   {
     name: "Modern Portfolio Website",
     year: "Aug 2025",
-    align: "left",
     category: "html",
     image: "/images/demo-portfolio-minimal.webp",
     link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
@@ -56,7 +57,6 @@ const allProjects = [
   {
     name: "FitZone E-com Store",
     year: "Sep 2025",
-    align: "right",
     category: "html",
     image: "/images/fitzone-web-img.webp",
     link: "https://hassanjaved17.github.io/FitZone-E-com-store/",
@@ -64,7 +64,6 @@ const allProjects = [
   {
     name: "Rental Car Landing Page",
     year: "Nov 2025",
-    align: "left",
     category: "html",
     image: "/images/rentcars-web-img.webp",
     link: "https://hassanjaved17.github.io/Rent-Car-Landing-Page/",
@@ -72,7 +71,6 @@ const allProjects = [
   {
     name: "Digital Clock",
     year: "May 2025",
-    align: "right",
     category: "html",
     image: "/images/digital-clock-web.webp",
     link: "https://hassanjaved17.github.io/Digital-Clock/",
@@ -80,7 +78,6 @@ const allProjects = [
   {
     name: "Neon Calculator",
     year: "June 2025",
-    align: "left",
     category: "html",
     image: "/images/neon-calculator-img.webp",
     link: "https://hassanjaved17.github.io/Neon-Calculator/",
@@ -109,7 +106,10 @@ const ProjectsMain = () => {
       ? allProjects
       : allProjects.filter((p) => p.category === activeFilter);
 
-  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const visibleProjects = filteredProjects.slice(0, visibleCount).map((p, i) => ({
+    ...p,
+    align: i % 2 === 0 ? "left" : "right",
+  }));
   const allShown = visibleCount >= filteredProjects.length;
 
   return (
