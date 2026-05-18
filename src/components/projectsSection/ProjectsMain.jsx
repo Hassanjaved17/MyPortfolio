@@ -41,6 +41,41 @@ const allProjects = [
     link: "https://premium-jewellers-hki1.vercel.app/",
   },
   {
+    name: "Medicare Elite Website",
+    year: "Feb 2026",
+    category: "html",
+    image: "/images/medicareelite.webp",
+    link: "https://medi-care-elite-prime.vercel.app/",
+  },
+  {
+    name: "Iron Forge Gym Website",
+    year: "March 2026",
+    category: "html",
+    image: "/images/ironforge.webp",
+    link: "https://iron-forge-gym-bars.vercel.app/",
+  },
+  {
+    name: "FitZone E-com Store",
+    year: "Sep 2025",
+    category: "html",
+    image: "/images/fitZone.webp",
+    link: "https://fit-zone-e-com-store.vercel.app/",
+  },
+  {
+    name: "EduPeak Academy Website",
+    year: "Apr 2026",
+    category: "html",
+    image: "./images/edupeak.webp",
+    link: "https://edu-peak-academy.vercel.app/",
+  },
+  {
+    name: "Blvck Blade Hair Salon Website",
+    year: "May 2026",
+    category: "html",
+    image: "/images/blackBlade.webp",
+    link: "https://blvck-blade-premium.vercel.app/",
+  },
+  {
     name: "Nexcent Landing Page",
     year: "Oct 2025",
     category: "html",
@@ -54,13 +89,7 @@ const allProjects = [
     image: "/images/demo-portfolio-minimal.webp",
     link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
   },
-  {
-    name: "FitZone E-com Store",
-    year: "Sep 2025",
-    category: "html",
-    image: "/images/fitzone-web-img.webp",
-    link: "https://hassanjaved17.github.io/FitZone-E-com-store/",
-  },
+
   {
     name: "Rental Car Landing Page",
     year: "Nov 2025",
@@ -204,5 +233,4 @@ const ProjectsMain = () => {
 };
 
 export default ProjectsMain;
-
 
