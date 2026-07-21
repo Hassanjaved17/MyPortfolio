@@ -10,7 +10,7 @@ import { fadeIn } from "../../framerMotion/variants";
 //   or your Cisco Networking Academy / Credly badge share link)
 const allCertificates = [
   {
-    name: "JavaScript FullStack (MEAN/MERN)", // e.g. "Web Development" or whatever your NAVTTC cert title is
+    name: "JavaScript F/S (MEAN/MERN)", // e.g. "Web Development" or whatever your NAVTTC cert title is
     issuer: "NAVTTC",
     date: "2026",
     category: "navttc",
