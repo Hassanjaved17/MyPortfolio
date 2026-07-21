@@ -10,6 +10,8 @@ import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
+import CertificatesMain from "./components/certificatesSection/CertificatesMain";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <SubSkills />
       <ExperienceMain />
       <ProjectsMain />
+      <CertificatesMain />
       <ContactMeMain />
       <FooterMain />
 
