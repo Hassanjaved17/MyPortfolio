@@ -5,6 +5,7 @@ const links = [
   { link: "Skills", section: "skills" },
   { link: "Experience", section: "experience" },
   { link: "Projects", section: "projects" },
+  { link: "Certificates", section: "certificates" },
   { link: "Contact", section: "contact" },
 ];
 

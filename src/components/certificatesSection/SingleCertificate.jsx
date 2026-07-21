@@ -11,12 +11,12 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
       viewport={{ once: false, amount: 0.1 }}
       className="flex flex-col rounded-xl overflow-hidden border border-white/20 bg-black/40 hover:scale-105 transform transition-all duration-500"
     >
-      <div className="relative w-full h-[180px] overflow-hidden">
-        <div className="w-full h-full bg-black/50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 z-10"></div>
+      <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-200 group">
+        <div className="w-full h-full bg-black/40 absolute top-0 left-0 opacity-100 group-hover:opacity-0 transition-all duration-500 z-10"></div>
         <img
           src={image}
           alt={`${name} certificate`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-2"
         />
       </div>
 
