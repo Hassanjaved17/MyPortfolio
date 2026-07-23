@@ -13,6 +13,13 @@ const allProjects = [
     link: "https://spend-smart-sandy.vercel.app/",
   },
   {
+    name: "Assests Manager",
+    year: "July 2026",
+    category: "fullstack",
+    image: "/images/maintainiq.webp",
+    link: "https://maintain-iq-hub.lovable.app/",
+  },
+  {
     name: "Quote Vault",
     year: "Mar 2026",
     category: "fullstack",
