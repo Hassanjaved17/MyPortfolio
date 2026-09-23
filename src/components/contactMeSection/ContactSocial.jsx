@@ -1,4 +1,4 @@
-import SingleContactSocial from "./SingleContactSocial"; // ✅ default import
+import SingleContactSocial from "./SingleContactSocial";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const ContactSocial = () => {
   return (
-    <div className="flex gap-4 text-[#FB9718] ">
+    <div className="flex gap-4 text-orange">
       <SingleContactSocial
         link="https://www.linkedin.com/in/hassan-javed-69766b336/"
         Icon={FaLinkedinIn}

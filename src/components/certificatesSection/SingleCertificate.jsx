@@ -8,7 +8,6 @@ import { fadeIn } from "../../framerMotion/variants";
 const SingleCertificate = ({ name, issuer, date, image, link }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // close on Escape + lock background scroll while modal is open
   useEffect(() => {
     if (!isOpen) return;
 
@@ -55,14 +54,13 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 text-lg flex gap-2 items-center text-[#f59e0b] hover:text-white transition-all duration-500 cursor-pointer w-fit"
+            className="mt-3 text-lg flex gap-2 items-center text-orange hover:text-white transition-all duration-500 cursor-pointer w-fit"
           >
             View Credential <BsFillArrowUpRightCircleFill />
           </a>
         </div>
       </motion.div>
 
-      {/* LIGHTBOX MODAL — rendered via portal so it always covers the full viewport */}
       {createPortal(
         <AnimatePresence>
           {isOpen && (
@@ -71,14 +69,14 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 sm:p-8"
+              className="fixed inset-0 z-[100] bg-[#0a0a0a]/90 flex items-center justify-center p-4 sm:p-8"
               onClick={() => setIsOpen(false)}
             >
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close"
-                className="absolute top-5 right-5 text-3xl text-white/80 hover:text-[#f59e0b] transition-all duration-300 z-10"
+                className="absolute top-5 right-5 text-3xl text-white/80 hover:text-orange transition-all duration-300 z-10"
               >
                 <IoMdClose />
               </button>

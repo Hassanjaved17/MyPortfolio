@@ -4,21 +4,17 @@ import SingleCertificate from "./SingleCertificate";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
-// TODO: replace placeholder values with your real certificate details.
-// - image: put the cert screenshot/PDF export under public/images/certificates/
-// - link: the public verification/credential URL (NAVTTC verification link,
-//   or your Cisco Networking Academy / Credly badge share link)
 const allCertificates = [
   {
-    name: "JavaScript F/S (MEAN/MERN)", // e.g. "Web Development" or whatever your NAVTTC cert title is
+    name: "JavaScript F/S (MEAN/MERN)",
     issuer: "NAVTTC",
     date: "2026",
     category: "navttc",
-    image: "./images/certificates/navttc-cert.webp",
+    image: "/images/certificates/navttc-cert.webp",
     link: "#",
   },
   {
-    name: "HTML Essentials", 
+    name: "HTML Essentials",
     issuer: "Cisco Networking Academy",
     date: "2025",
     category: "cisco",
@@ -67,7 +63,6 @@ const CertificatesMain = () => {
 
   return (
     <div id="certificates" className="max-w-[1200px] mx-auto px-4">
-      {/* HEADING */}
       <motion.div
         variants={fadeIn("top", 0)}
         initial="hidden"
@@ -77,24 +72,21 @@ const CertificatesMain = () => {
         <CertificatesText />
       </motion.div>
 
-      {/* FILTERS */}
       <div className="flex gap-4 justify-center flex-wrap mt-10">
         {filterOptions.map((btn) => (
           <button
             key={btn.value}
             onClick={() => setActiveFilter(btn.value)}
-            className={`px-5 py-2 rounded-full border transition-all duration-300 ${
-              activeFilter === btn.value
-                ? "bg-[#f59e0b] text-black border-[#f59e0b]"
-                : "border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black"
-            }`}
+            className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
+                ? "bg-orange text-white border-orange"
+                : "border-orange text-orange hover:bg-orange hover:text-white"
+              }`}
           >
             {btn.label}
           </button>
         ))}
       </div>
 
-      {/* CERTIFICATES GRID */}
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         <AnimatePresence>
           {filteredCertificates.length > 0 ? (
@@ -121,7 +113,7 @@ const CertificatesMain = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-center text-[#f59e0b] text-lg mt-8 col-span-full"
+              className="text-center text-orange text-lg mt-8 col-span-full"
             >
               No certificates found for this filter.
             </motion.p>

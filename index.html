@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("hj-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
 

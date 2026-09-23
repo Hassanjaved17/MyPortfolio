@@ -3,6 +3,40 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg: 21 16 14;
+  --color-brown: 42 34 31;
+  --color-brown-light: 58 48 44;
+  --color-surface: 28 22 20;
+  --color-text: 241 230 222;
+  --color-grey: 130 116 110;
+  --color-grey-light: 168 152 145;
+  --color-grey-dark: 74 64 60;
+  --color-orange: 251 151 24;
+  --color-orange-light: 250 194 123;
+  --color-orange-dark: 210 132 34;
+  --color-cyan: 21 209 233;
+  --color-cyan-light: 136 229 240;
+  --color-cyan-dark: 0 159 179;
+}
+
+[data-theme="light"] {
+  --color-bg: 250 245 240;
+  --color-brown: 240 228 216;
+  --color-brown-light: 230 216 202;
+  --color-surface: 255 255 255;
+  --color-text: 32 26 23;
+  --color-grey: 107 93 86;
+  --color-grey-light: 143 128 120;
+  --color-grey-dark: 74 63 58;
+  --color-orange: 234 128 12;
+  --color-orange-light: 250 194 123;
+  --color-orange-dark: 178 104 18;
+  --color-cyan: 0 150 168;
+  --color-cyan-light: 88 200 214;
+  --color-cyan-dark: 0 120 135;
+}
+
 body {
-  @apply bg-darkBrown;
+  @apply bg-darkBrown text-white transition-colors duration-500;
 }

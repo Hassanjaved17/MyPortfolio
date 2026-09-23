@@ -44,33 +44,24 @@ const ContactForm = () => {
     setTimeout(() => setRipple(null), 600);
   };
 
-  // Pure Tailwind input styles
   const inputClass = `
     h-12 w-full rounded-lg bg-lightBrown px-3
-    border border-[#FB9718]
-    focus:outline-none focus:border-[#f59e0b] focus:ring-1 focus:ring-[#f59e0b]
-    placeholder:text-gray-500 text-white
+    border border-orange
+    focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange
+    placeholder:text-lightGrey/60 text-white
     transition-all duration-300
   `;
 
   return (
     <>
-      {/*
-        ✅ Style block kept ONLY for things Tailwind physically cannot do:
-           1. ::before shimmer sweep (pseudo-element)
-           2. Ripple burst from dynamic click coords
-           3. background-position gradient animation
-        Everything else in this file is pure Tailwind.
-      */}
       <style>{`
         .send-btn {
-          background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+          background: linear-gradient(135deg, rgb(var(--color-orange)) 0%, rgb(var(--color-orange-light)) 50%, rgb(var(--color-orange)) 100%);
           background-size: 200% 200%;
           transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
         }
         .send-btn:hover { background-position: right center; }
 
-        /* Shimmer sweep — impossible in Tailwind */
         .send-btn::before {
           content: '';
           position: absolute;
@@ -81,7 +72,6 @@ const ContactForm = () => {
         }
         .send-btn:hover::before { left: 150%; }
 
-        /* Ripple — needs dynamic JS coords, impossible in Tailwind */
         .send-ripple {
           position: absolute;
           border-radius: 50%;
@@ -95,11 +85,9 @@ const ContactForm = () => {
           to { transform: scale(30); opacity: 0; }
         }
 
-        /* Icon fly — needs group-hover on sibling which TW can't target here */
         .send-btn:hover .send-icon { transform: translateX(5px) rotate(-35deg); }
         .send-icon { transition: transform 0.3s ease; }
 
-        /* Spinner */
         .send-spinner {
           width: 18px; height: 18px;
           border: 2.5px solid rgba(0,0,0,0.2);
@@ -112,16 +100,13 @@ const ContactForm = () => {
       `}</style>
 
       <div>
-        {/* Success message — pure Tailwind */}
         {success && (
-          <p className="text-[#f59e0b] font-medium text-sm mb-3 animate-pulse">
+          <p className="text-orange font-medium text-sm mb-3 animate-pulse">
             {success}
           </p>
         )}
 
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-
-          {/* All inputs — pure Tailwind */}
           <input
             type="text"
             name="from_name"
@@ -159,16 +144,15 @@ const ContactForm = () => {
             required
             className={`
               w-full rounded-lg bg-lightBrown p-3 resize-none
-              border border-[#FB9718]
-              focus:outline-none focus:border-[#f59e0b] focus:ring-1 focus:ring-[#f59e0b]
-              placeholder:text-gray-500 text-white
+              border border-orange
+              focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange
+              placeholder:text-lightGrey/60 text-white
               transition-all duration-300
             `}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          {/* Button — Tailwind for layout/sizing, style block for effects */}
           <button
             type="submit"
             disabled={isSubmitting}
@@ -176,8 +160,8 @@ const ContactForm = () => {
             className="send-btn relative overflow-hidden w-full h-[52px] rounded-xl
               flex items-center justify-center gap-3
               font-bold tracking-widest uppercase text-sm text-black
-              shadow-[0_4px_20px_rgba(245,158,11,0.35)]
-              hover:shadow-[0_6px_30px_rgba(245,158,11,0.6)]
+              shadow-[0_4px_20px_rgb(var(--color-orange)/0.35)]
+              hover:shadow-[0_6px_30px_rgb(var(--color-orange)/0.6)]
               hover:-translate-y-0.5
               active:translate-y-0
               disabled:opacity-70 disabled:cursor-not-allowed disabled:translate-y-0
@@ -201,7 +185,6 @@ const ContactForm = () => {
               </>
             )}
           </button>
-
         </form>
       </div>
     </>

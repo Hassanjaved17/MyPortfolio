@@ -13,7 +13,7 @@ const allProjects = [
     link: "https://spend-smart-sandy.vercel.app/",
   },
   {
-    name: "Assests Manager",
+    name: "Assets Manager",
     year: "July 2026",
     category: "fullstack",
     image: "/images/maintainiq.webp",
@@ -72,7 +72,7 @@ const allProjects = [
     name: "EduPeak Academy Website",
     year: "Apr 2026",
     category: "html",
-    image: "./images/edupeak.webp",
+    image: "/images/edupeak.webp",
     link: "https://edu-peak-academy.vercel.app/",
   },
   {
@@ -96,7 +96,6 @@ const allProjects = [
     image: "/images/demo-portfolio-minimal.webp",
     link: "https://hassanjaved17.github.io/Demo_Portfolio_Assignment/",
   },
-
   {
     name: "Rental Car Landing Page",
     year: "Nov 2025",
@@ -150,8 +149,6 @@ const ProjectsMain = () => {
 
   return (
     <div id="projects" className="max-w-[1200px] mx-auto px-4">
-
-      {/* HEADING */}
       <motion.div
         variants={fadeIn("top", 0)}
         initial="hidden"
@@ -160,7 +157,6 @@ const ProjectsMain = () => {
       >
         <ProjectsText />
       </motion.div>
-
 
       <div className="flex gap-4 justify-center flex-wrap mt-10">
         {filterOptions.map((btn) => (
@@ -171,8 +167,8 @@ const ProjectsMain = () => {
               setVisibleCount(2);
             }}
             className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
-              ? "bg-[#f59e0b] text-black border-[#f59e0b]"
-              : "border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black"
+                ? "bg-orange text-white border-orange"
+                : "border-orange text-orange hover:bg-orange hover:text-white"
               }`}
           >
             {btn.label}
@@ -180,7 +176,6 @@ const ProjectsMain = () => {
         ))}
       </div>
 
-      {/* PROJECTS LIST */}
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
         <AnimatePresence>
           {visibleProjects.length > 0 ? (
@@ -208,7 +203,7 @@ const ProjectsMain = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-center text-[#f59e0b] text-lg mt-8"
+              className="text-center text-orange text-lg mt-8"
             >
               No projects found for this filter.
             </motion.p>
@@ -221,14 +216,14 @@ const ProjectsMain = () => {
           {!allShown ? (
             <button
               onClick={() => setVisibleCount((prev) => prev + 2)}
-              className="px-6 py-3 rounded-lg text-lg border border-[#f59e0b] text-[#f59e0b] hover:bg-[#f59e0b] hover:text-black transition-all duration-300"
+              className="px-6 py-3 rounded-lg text-lg border border-orange text-orange hover:bg-orange hover:text-white transition-all duration-300"
             >
               See More
             </button>
           ) : (
             <button
               onClick={() => setVisibleCount(2)}
-              className="px-6 py-3 rounded-lg text-lg border border-orange text-orange hover:bg-orange hover:text-black transition-all duration-300"
+              className="px-6 py-3 rounded-lg text-lg border border-orange text-orange hover:bg-orange hover:text-white transition-all duration-300"
             >
               Show Less
             </button>
@@ -240,4 +235,3 @@ const ProjectsMain = () => {
 };
 
 export default ProjectsMain;
-

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SkillsText from "./SkillsText";
 import SingleSkill from "./SingleSkill";
 import { motion } from "framer-motion";
@@ -7,7 +8,6 @@ import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaBootstrap 
 import { IoLogoJavascript } from "react-icons/io";
 import { SiExpress, SiMongodb, SiFirebase, SiPostman, SiRedux, SiAxios } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-
 
 const skills = [
   { name: "HTML5", icon: FaHtml5, category: "Frontend", color: "#e34f26" },
@@ -27,17 +27,17 @@ const skills = [
   { name: "Axios", icon: SiAxios, category: "Tools", color: "#5a29e4" },
 ];
 
-//  Stagger container — animates children in sequence automatically
+const categories = ["All", "Frontend", "Backend", "Tools"];
+
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.07, // each card appears 70ms after the previous
+      staggerChildren: 0.07,
       delayChildren: 0.1,
     },
   },
 };
-
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -45,11 +45,16 @@ const cardVariants = {
 };
 
 const SkillsMain = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredSkills =
+    activeCategory === "All"
+      ? skills
+      : skills.filter((skill) => skill.category === activeCategory);
+
   return (
     <div id="skills">
       <div className="max-w-[1200px] px-4 mx-auto">
-
-        {/* Heading */}
         <motion.div
           variants={fadeIn("down", 0.2)}
           initial="hidden"
@@ -59,20 +64,31 @@ const SkillsMain = () => {
           <SkillsText />
         </motion.div>
 
-        {/* Cards */}
+        <div className="flex flex-wrap justify-center gap-3 mt-10">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 ${activeCategory === cat
+                  ? "bg-orange border-orange text-white"
+                  : "border-orange/25 text-lightGrey hover:border-orange/60 hover:text-white"
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 mt-12"
+          key={activeCategory}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 mt-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.1 }}
         >
-          {skills.map((skill) => (
-            <motion.div
-              key={skill.name}
-              variants={cardVariants}
-         
-            >
+          {filteredSkills.map((skill) => (
+            <motion.div key={skill.name} variants={cardVariants}>
               <SingleSkill
                 name={skill.name}
                 icon={skill.icon}
@@ -83,10 +99,9 @@ const SkillsMain = () => {
           ))}
         </motion.div>
 
-        <p className="text-center mt-8 mb-4 text-xs text-gray-600 tracking-widest uppercase">
+        <p className="text-center mt-8 mb-4 text-xs text-lightGrey tracking-widest uppercase">
           {skills.length} Technologies & Growing
         </p>
-
       </div>
     </div>
   );
