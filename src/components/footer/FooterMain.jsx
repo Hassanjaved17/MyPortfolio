@@ -18,27 +18,22 @@ const FooterMain = () => {
 
   return (
     <footer className="px-4 mt-24">
-
-      {/* Top Divider */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent mb-10 opacity-40" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-orange to-transparent mb-10 opacity-40" />
 
       <div className="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-10 text-lightGrey">
-
-        {/* Brand */}
         <div className="flex flex-col gap-2 text-center md:text-left">
           <h2 className="text-2xl font-bold text-white tracking-wide">
             Hassan Javed
           </h2>
-         
-          <p className="text-xs tracking-widest uppercase font-medium text-[#FB9718] opacity-60">
+
+          <p className="text-xs tracking-widest uppercase font-medium text-orange opacity-60">
             MERN Stack Developer
           </p>
-          <p className="text-sm text-gray-300 leading-relaxed mt-1">
+          <p className="text-sm text-lightGrey leading-relaxed mt-1">
             Building modern and interactive web experiences with clean code and creative design.
           </p>
         </div>
 
-        {/* Quick Links */}
         <div className="flex flex-col gap-2 text-center md:text-left">
           <h3 className="text-base font-semibold text-white mb-1 tracking-wide">
             Quick Links
@@ -49,10 +44,10 @@ const FooterMain = () => {
                 <Link
                   to={item.section}
                   spy smooth duration={500} offset={-120}
-                  className="relative text-sm text-gray-300 cursor-pointer transition-colors duration-300
-                             hover:text-amber-500
+                  className="relative text-sm text-lightGrey cursor-pointer transition-colors duration-300
+                             hover:text-orange
                              after:content-[''] after:absolute after:left-0 after:bottom-0
-                             after:h-[1px] after:w-0 after:bg-amber-500
+                             after:h-[1px] after:w-0 after:bg-orange
                              after:transition-all after:duration-300
                              hover:after:w-full"
                 >
@@ -63,7 +58,6 @@ const FooterMain = () => {
           </ul>
         </div>
 
-        {/* Socials */}
         <div className="flex flex-col gap-2 text-center md:text-left">
           <h3 className="text-base font-semibold text-white mb-1 tracking-wide">
             Connect With Me
@@ -78,33 +72,31 @@ const FooterMain = () => {
                 aria-label={s.label}
                 title={s.label}
                 className="flex items-center justify-center w-10 h-10 rounded-xl
-                           border border-amber-500/30
-                           bg-amber-500/5
-                           text-gray-400 text-lg
+                           border border-orange/30
+                           bg-orange/5
+                           text-lightGrey text-lg
                            transition-all duration-300
-                           hover:text-amber-500
-                           hover:border-amber-500/60
-                           hover:bg-amber-500/10
-                           hover:shadow-[0_0_14px_rgba(245,158,11,0.25)]
+                           hover:text-orange
+                           hover:border-orange/60
+                           hover:bg-orange/10
+                           hover:shadow-[0_0_14px_rgb(var(--color-orange)/0.25)]
                            hover:-translate-y-1"
               >
                 {s.icon}
               </a>
             ))}
           </div>
-          <p className="text-xs text-gray-300  mt-2 opacity-70">
+          <p className="text-xs text-lightGrey mt-2 opacity-70">
             Let's build something great together.
           </p>
         </div>
       </div>
 
-      {/* Bottom Divider */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent mt-10 opacity-10" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-orange to-transparent mt-10 opacity-10" />
 
-      <div className="text-center py-6 text-xs text-gray-300 tracking-widest uppercase opacity-60">
+      <div className="text-center py-6 text-xs text-lightGrey tracking-widest uppercase opacity-60">
         © {new Date().getFullYear()} Hassan Javed · All Rights Reserved
       </div>
-
     </footer>
   );
 };

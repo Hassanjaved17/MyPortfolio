@@ -11,26 +11,29 @@ import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import CertificatesMain from "./components/certificatesSection/CertificatesMain";
-
+import Loader from "./components/Loader";
 
 function App() {
   return (
-    <main className="font-body text-white relative overflow-hidden">
-      <NavbarMain />
-      <HeroMain />
-      <HeroGradient />
-      <SubHeroMain />
-      <AboutMeMain />
-      <SkillsMain />
-      <SubSkills />
-      <ExperienceMain />
-      <ProjectsMain />
-      <CertificatesMain />
-      <ContactMeMain />
-      <FooterMain />
+    <>
+      <Loader />
+      <main className="font-body text-white relative overflow-hidden">
+        <NavbarMain />
+        <HeroMain />
+        <HeroGradient />
+        <SubHeroMain />
+        <AboutMeMain />
+        <SkillsMain />
+        <SubSkills />
+        <ExperienceMain />
+        <ProjectsMain />
+        <CertificatesMain />
+        <ContactMeMain />
+        <FooterMain />
 
-      <ScrollToTopBtn />
-    </main>
+        <ScrollToTopBtn />
+      </main>
+    </>
   );
 }
 
