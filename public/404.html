@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Hassan Javed</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #15100e;
+            color: #f1e6de;
+            font-family: "Josefin Sans", sans-serif;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .mark {
+            font-family: "Nunito", monospace;
+            font-weight: 800;
+            font-size: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 32px;
+        }
+
+        .mark .cyan {
+            color: #15d1e9;
+        }
+
+        .mark .orange {
+            color: #fb9718;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 12px;
+            height: 3px;
+            background: #15d1e9;
+            border-radius: 2px;
+            animation: blink 0.9s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
+            color: #fb9718;
+            margin: 0;
+            line-height: 1;
+        }
+
+        p {
+            color: #978580;
+            font-size: 1.1rem;
+            max-width: 420px;
+            margin: 16px 0 32px;
+            line-height: 1.6;
+        }
+
+        a.home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            border: 1px solid rgba(251, 151, 24, 0.4);
+            color: #f1e6de;
+            text-decoration: none;
+            font-weight: 700;
+            background: linear-gradient(135deg, #009fb3, #fb9718);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a.home-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(21, 209, 233, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mark">
+        <span class="cyan">&lt;</span><span class="orange">HJ</span><span class="cyan">/&gt;</span>
+        <span class="cursor"></span>
+    </div>
+
+    <h1>404</h1>
+    <p>This page doesn't exist — maybe a broken link, or a typo in the URL. Let's get you back on track.</p>
+
+    <a class="home-btn" href="/">← Back to Home</a>
+</body>
+
+</html>
