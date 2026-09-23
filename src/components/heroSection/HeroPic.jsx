@@ -39,6 +39,8 @@ const HeroPic = () => {
                      ${isLoading ? "opacity-0" : "opacity-100"}`}
           onLoad={() => setIsLoading(false)}
           alt="Hassan Javed"
+          loading="eager"
+          fetchPriority="high"
         />
 
         <div

@@ -7,7 +7,12 @@ const ExperienceTopMiddle = () => {
       whileHover={{ scale: 1.03 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
     >
-      <img src="/images/experience-image.png" alt="My experience" />
+      <img
+        src="/images/experience-image.png"
+        alt="My experience"
+        loading="lazy"
+        decoding="async"
+      />
     </motion.div>
   );
 };

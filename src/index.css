@@ -44,3 +44,12 @@ html {
 body {
   @apply bg-darkBrown text-white transition-colors duration-500;
 }
+
+/* Consistent keyboard focus ring across the whole site.
+   Only shows for keyboard nav (:focus-visible), not mouse clicks. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgb(var(--color-cyan));
+  outline-offset: 3px;
+  border-radius: 4px;
+}

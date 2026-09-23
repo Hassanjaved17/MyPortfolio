@@ -35,6 +35,7 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
+          aria-label={`View full size ${name} certificate`}
           className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-200 group cursor-zoom-in"
         >
           <div className="w-full h-full bg-black/40 absolute top-0 left-0 opacity-100 group-hover:opacity-0 transition-all duration-500 z-10"></div>
@@ -42,6 +43,8 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
             src={image}
             alt={`${name} certificate`}
             className="w-full h-full object-contain p-2"
+            loading="lazy"
+            decoding="async"
           />
         </button>
 
@@ -75,7 +78,7 @@ const SingleCertificate = ({ name, issuer, date, image, link }) => {
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                aria-label="Close"
+                aria-label="Close certificate preview"
                 className="absolute top-5 right-5 text-3xl text-white/80 hover:text-orange transition-all duration-300 z-10"
               >
                 <IoMdClose />

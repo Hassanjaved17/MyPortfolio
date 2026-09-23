@@ -37,7 +37,13 @@ const SingleProject = ({ name, year, align, image, link }) => {
 
       <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white/20">
         <div className="w-full h-full bg-black/50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden z-10 rounded-xl"></div>
-        <img src={image} alt={`${name} preview`} className="w-full h-full object-cover" />
+        <img
+          src={image}
+          alt={`${name} preview`}
+          className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </motion.div>
   );
