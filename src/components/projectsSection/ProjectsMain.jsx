@@ -6,11 +6,11 @@ import { fadeIn } from "../../framerMotion/variants";
 
 const allProjects = [
   {
-    name: "SpendSmart",
-    year: "Mar 2026",
+    name: "Shop.co E-commerce",
+    year: "Sep 2026",
     category: "fullstack",
-    image: "/images/spendsmart-img.webp",
-    link: "https://spend-smart-sandy.vercel.app/",
+    image: "/images/shop.co.webp",
+    link: "https://shopco-premium.vercel.app/",
   },
   {
     name: "Assets Manager",
@@ -19,6 +19,14 @@ const allProjects = [
     image: "/images/maintainiq.webp",
     link: "https://maintain-iq-hub.lovable.app/",
   },
+  {
+    name: "SpendSmart",
+    year: "Mar 2026",
+    category: "fullstack",
+    image: "/images/spendsmart-img.webp",
+    link: "https://spend-smart-sandy.vercel.app/",
+  },
+  
   {
     name: "Quote Vault",
     year: "Mar 2026",
@@ -167,8 +175,8 @@ const ProjectsMain = () => {
               setVisibleCount(2);
             }}
             className={`px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === btn.value
-                ? "bg-orange text-white border-orange"
-                : "border-orange text-orange hover:bg-orange hover:text-white"
+              ? "bg-orange text-white border-orange"
+              : "border-orange text-orange hover:bg-orange hover:text-white"
               }`}
           >
             {btn.label}
