@@ -19,6 +19,20 @@ const allProjects = [
     image: "/images/maintainiq.webp",
     link: "https://maintain-iq-hub.lovable.app/",
   },
+ {
+    name: "SunCore Energy",
+    year: "Aug 2026",
+    category: "fullstack",
+    image: "/images/suncore.webp",
+    link: "https://sun-core-energy.vercel.app/",
+  },
+{
+    name: "Urban Wear",
+    year: "Sep 2026",
+    category: "fullstack",
+    image: "/images/urban-wear.webp",
+    link: "https://fashion-blueprint-project.lovable.app/",
+  },
   {
     name: "SpendSmart",
     year: "Mar 2026",
