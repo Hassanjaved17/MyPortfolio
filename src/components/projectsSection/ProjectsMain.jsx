@@ -30,7 +30,7 @@ const allProjects = [
     name: "Urban Wear",
     year: "Sep 2026",
     category: "fullstack",
-    image: "/images/urban-wear.webp",
+    image: "/images/urbanwear.webp",
     link: "https://fashion-blueprint-project.lovable.app/",
   },
   {
